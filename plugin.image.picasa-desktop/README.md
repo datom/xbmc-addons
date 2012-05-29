@@ -20,6 +20,6 @@
 9. if nothing went wrong you musst see your albums
 
 
-## External Libraries
+### Using Libraries
 
 *pysmb* from http://miketeo.net/wp/index.php/projects/pysmb
