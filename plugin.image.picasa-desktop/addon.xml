@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon
+  id="plugin.image.picasa-desktop"
+  name="Picasa Desktop"
+  version="0.1.0"
+  provider-name="Thomas Ballmann (datom)">
+  <requires>
+    <import addon="xbmc.gui" version="2.0" optional="false" />
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+    <provides>image</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plugin to browse picasa albums and photos from the desktop client</summary>
+    <summary lang="de">Plugin zum anzeigen der Alben die im Picasa Desktop angelegt wurden</summary>
+    <description>Plugin to browse picasa albums and photos from the desktop client. Works with Win and Ubuntu 11.10 / Picasa 3.0</description>
+    <description lang="de">Plugin zum anzeigen der Alben die im Picasa Desktop angelegt wurden</description>
+    <platform>all</platform>
+  </extension>
+</addon>

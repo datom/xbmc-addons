@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <!-- General -->
+  <category label="30000">
+    <setting id="db_location" type="enum" label="30001" lvalues="30002|30003|30004" default="0" />
+    
+    <setting id="db_path_auto" type="folder" visible="false" default="" />
+    <setting id="db_path_local" type="folder" label="30010" visible="eq(-2,1)" default="" />
+    
+    <setting id="db_path_network_u" type="text" label="30020" visible="!System.Platform.Windows+eq(-3,2)" enable="!System.Platform.Windows" default="text" />
+    <setting id="db_path_network_w" type="folder" label="30020" visible="System.Platform.Windows+eq(-4,2)" enable="System.Platform.Windows" default="folder" />
+    <setting id="db_path_network_user" type="text" label="30021" visible="eq(-5,2)" default="" />
+    <setting id="db_path_network_pass" type="text" label="30022" visible="eq(-6,2)" default="" />
+
+  </category>
+</settings>
