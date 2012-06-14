@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon
+  id="plugin.video.tv-kino"
+  name="Tv-Kino"
+  version="0.0.1"
+  provider-name="Thomas Ballmann">
+  <requires>
+    <import addon="xbmc.gui" version="2.0" optional="false" />
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary></summary>
+    <summary lang="de"></summary>
+    <description></description>
+    <description lang="de"></description>
+    <platform>all</platform>
+  </extension>
+</addon>

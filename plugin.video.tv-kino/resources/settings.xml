@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <!-- General -->
+  <category label="30000">
+    <setting id="lang" type="enum" label="30001" lvalues="all|de|fr|ch" default="0" />
+  </category>
+</settings>
