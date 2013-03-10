@@ -46,7 +46,7 @@ class tv_kinoAddon(AddonHelper):
 												"language": channel.lang
 			} )
 			
-			url = "rtmp://live.tv-kino.net/stream playpath=%s swfUrl=http://stream.tv-kino.net/player.swf live=true" % (channel.name.lower())
+			url = "rtmp://livestream3.tv-kino.net/stream playpath=%s swfUrl=http://stream.tv-kino.net/player.swf live=true" % (channel.name.lower())
 			
 			self.xbmcplugin().addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz,isFolder=False,totalItems=len(channels))
 			
