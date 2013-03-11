@@ -6,7 +6,7 @@ import tv_kino
 class test_tv_kino(unittest.TestCase):
     
     """
-    ...
+    test tv-kino model
     """
     
     tv_kino = None
@@ -24,6 +24,9 @@ class test_tv_kino(unittest.TestCase):
     def test_getChannels(self):
         
         channels = self.tv_kino.getChannels()
+
+        self.assertNotEqual(len(channels), 0)
+
         for channel in channels:
             self.assertNotEqual(channel, tv_kino.Channel)
             self.assertNotEqual(channel.name, "")

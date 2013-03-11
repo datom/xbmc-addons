@@ -14,23 +14,19 @@ class tv_kino(object):
     domain = "http://www.tv-kino.net"
 
 
-    def __init__(self):
-        '''
-        Constructor
-        '''
-        
-        
+
     def getChannels(self):
-        '''
+        """
         get available channels
-        '''
-        
-        req = urllib2.Request(self.domain)
+        @return:
+        """
+
+        req = urllib2.Request(self.domain, {}, {'User-Agent' : 'XBMC'})
         response = urllib2.urlopen(req)
         content = response.read()
         response.close()
         
-        match = re.compile('portfolio-thumbnail">.*?href="(.+?)".*?flags/(.+?).png".*?src="(.+?)".*?<h3>.*?>(.+?)</a>', re.DOTALL).findall(content)
+        match = re.compile('portfolio-thumbnail">.*?href="(.+?)".*?flags/(.+?).png".*?src="(http://images.+?)".*?<h3>.*?>(.+?)</a>', re.DOTALL).findall(content)
         
         channels = []
         for m in match:
@@ -78,7 +74,18 @@ class tv_kino(object):
         print channel.getStream()
         
         # rtmp://live.tv-kino.net/stream playpath=ard swfUrl=http://stream.tv-kino.net/player.swf live=true
-        
+
+
+    def getStreamUrl(self, channel):
+        """
+        get stream url
+        @param channel:
+        @return: string
+        """
+
+        url = "rtmp://livestream3.tv-kino.net/stream playpath=%s swfUrl=http://stream.tv-kino.net/player.swf live=true" % (channel.name.lower())
+
+        return url
 
 
 
@@ -87,10 +94,5 @@ class Channel(object):
     name = ""
     lang = ""
     logo = ""
-    
 
-
-if __name__ == '__main__':
-    tv_kino = tv_kino()
-    channels = tv_kino.getChannels()
     
