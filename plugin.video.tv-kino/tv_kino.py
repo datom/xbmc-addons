@@ -21,7 +21,7 @@ class tv_kino(object):
         @return:
         """
 
-        req = urllib2.Request(self.domain, {}, {'User-Agent' : 'XBMC'})
+        req = urllib2.Request(self.domain, '', {'User-Agent': 'XBMC'})
         response = urllib2.urlopen(req)
         content = response.read()
         response.close()
@@ -82,8 +82,7 @@ class tv_kino(object):
         @param channel:
         @return: string
         """
-
-        url = "rtmp://livestream3.tv-kino.net/stream playpath=%s swfUrl=http://stream.tv-kino.net/player.swf live=true" % (channel.name.lower())
+        url = "rtmp://srv0.stream-server.org:1935/livetv/ playpath=%s swfUrl=http://stream.tv-kino.net/player.swf live=true" % (channel.name.lower())
 
         return url
 
